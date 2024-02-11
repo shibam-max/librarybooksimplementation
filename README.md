@@ -4,19 +4,31 @@ Welcome to the Book Management System! This application allows users to manage b
 
 Prerequisites:
 
-Java Development Kit (JDK) version 8 or later Apache Maven Postman (optional, for API testing) MySql Create any database in MySql server
+Java Development Kit (JDK) version 8 or later 
+Apache Maven 
+Postman (optional, for API testing) 
+MySql 
+Create any database in MySql server
 
 Installation Clone the repository to your local machine: git clone https://github.com/shibam-max/librarybooksimplementation.git
 
 Navigate to the project directory: cd jwt2
 
-Update Database connection credentials in application.properties file: update this credentials: spring.datasource.url = jdbc:mysql://localhost:3306/ spring.datasource.username = spring.datasource.password = server.port=
+Update Database connection credentials in application.properties file: 
+update this credentials: 
+spring.datasource.url = jdbc:mysql://localhost:3306/<db-name> 
+spring.datasource.username = <username>
+spring.datasource.password = <password>
+server.port=<port>
 
-Build the project using Maven: mvn clean install
+Build the project using Maven: 
+mvn clean install
 
-Run the application: java -jar target/jwt2-0.0.1-SNAPSHOT.jar
+Run the application: 
+java -jar target/jwt2-0.0.1-SNAPSHOT.jar
 
 Application should be up and running on port 8082
+http://localhost:8082
 
 Usage:
 
@@ -30,6 +42,11 @@ Deleting a Book Use the /auth/admin/deleteBook endpoint to delete a book. Provid
 
 Viewing Books Use the /auth/admin/home endpoint to view all books (admin). Use the /auth/user/home endpoint to view all books (user). Include the Bearer JWT token in the request header.
 
-Examples (Postman) Authentication: Send a POST request to /auth/login with credentials in the request body. Copy the bearer token from the response. Adding a User: Send a POST request to /auth/addNewUser with the user details in the request body. Adding a Book: Send a POST request to /auth/admin/addBook with the book details in the request body and the bearer token in the header. Deleting a Book: Send a DELETE request to /auth/admin/deleteBook?bookName=BookName with the bearer token in the header. Viewing Books: Send a GET request to /auth/admin/home or /auth/user/home with the bearer token in the header.
+Examples (Postman) Authentication: 
+Send a POST request to /auth/login with credentials in the request body. Copy the bearer token from the response. 
+Adding a User: Send a POST request to /auth/addNewUser with the user details in the request body. 
+Adding a Book: Send a POST request to /auth/admin/addBook with the book details in the request body and the bearer token in the header. 
+Deleting a Book: Send a DELETE request to /auth/admin/deleteBook?bookName=BookName with the bearer token in the header. 
+Viewing Books: Send a GET request to /auth/admin/home or /auth/user/home with the bearer token in the header.
 
 Support For any issues or questions, please contact shibamsamaddar1999@gmail.com.
